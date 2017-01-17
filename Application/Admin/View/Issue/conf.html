@@ -1,0 +1,107 @@
+<include file="Public:header"/>
+<div id="main-content">
+	<div id="top-alert" class="fixed alert alert-error" style="display: none;">
+		<button class="close fixed" style="margin-top: 4px;">&times;</button>
+		<div class="alert-content">警告内容</div>
+	</div>
+	<div id="main" class="main">
+		<div class="main-title-h">
+			<span class="h1-title"><a href="{:U('Trade/market')}">认购管理</a> >></span>
+                        <span class="h1-title">认购配置</span>
+		</div>
+            
+		<div class="tab-wrap">
+			<div class="tab-content">
+				<form id="form" action="{:U('Admin/Issue/conf')}" method="post" class="form-horizontal" enctype="multipart/form-data">
+					<div id="tab" class="tab-pane in tab">
+						<div class="form-item cf">
+                                                    
+							<table>
+								<tr class="controls">
+									<td class="item-label">最大发行量:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="issue_total_mum" value="{$issue_num}">
+									</td>
+                                                                        <td class="item-note">已发行<span>{$issued_num}</span></td>
+								</tr>
+                                                                
+                                                                <!--
+								<tr class="controls">
+									<td class="item-label">下级提成比例</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="nextrate" value="{$nextrate}">
+									</td>
+									<td class="item-note">%</td>
+								</tr>
+                                                                -->
+                                                                
+								<tr class="controls">
+									<td class="item-label">产币率:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="chanbilv" value="{$chanbilv}">
+									</td>
+									<td class="item-note">%</td>
+								</tr>
+								<tr class="controls">
+									<td class="item-label">静态倍率:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="jtbl" value="{$jtbl}">
+									</td>
+									<td class="item-note"></td>
+								</tr>
+                                                                
+                                                                <tr>
+                                                                     <td><span style="font-size:16px;font-weight:600;padding-left:12px;">提成分配</span></td>
+                                                                     <td colspan="2" style="color:red;">(三者之和加起来为100)</td>
+                                                                </tr>
+								<tr class="controls">
+									<td class="item-label">交易份额:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="rate_trade" value="{$trade}">
+									</td>
+									<td class="item-note">%</td>
+								</tr>
+								<tr class="controls">
+									<td class="item-label">商场份额:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="rate_market" value="{$market}">
+									</td>
+									<td class="item-note">%</td>
+								</tr>
+								<tr class="controls">
+									<td class="item-label">基金份额:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="rate_found" value="{$found}">
+									</td>
+									<td class="item-note">%</td>
+								</tr>
+                                                                <tr class="controls">
+									<td class="item-label"></td>
+									<td>
+										<div class="form-item cf">
+											<button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定
+											</button>
+											<a class="btn btn-return" href="{$Think.server.HTTP_REFERER}">返 回</a>
+										</div>
+									</td>
+								</tr>
+							</table>
+                                                    
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<include file="Public:footer"/>
+<block name="script">
+	<script type="text/javascript" charset="utf-8">
+		//导航高亮
+		highlight_subnav("{:U('Trade/market')}");
+                
+                //自定义添加配置导航
+         var nav_str = '<li><a class="item" href="/Admin/Issue/conf.html"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>  认购配置</li>';
+         $("#subnav>ul:eq(0)>li:eq(0)").before(nav_str);
+	</script>
+</block>

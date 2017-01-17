@@ -1,0 +1,3 @@
+<?php
+//000000000000s:542:"<span><span style="line-height:21px;"><span style="font-size:16px;color:#E56600;">★</span><span style="color:#E56600;"> &nbsp;</span><span style="color:#E56600;"></span><span style="color:#E56600;">通过微信，QQ，短信等社交软件，将您的【专属邀请码】或【专属链接】直接发送给好友进行注册，他将会自动成为您的推荐 &nbsp;</span><span style="color:#E56600;">❿</span><span style="color:#E56600;">❷</span><span style="color:#E56600;"></span><span style="color:#E56600;"></span></span></span>";
+?>

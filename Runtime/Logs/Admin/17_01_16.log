@@ -1,0 +1,946 @@
+[ 2017-01-16T18:24:40+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0040s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined index: time D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 207 行.
+NOTIC: [8] Undefined index: time D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 207 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:24:42+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0020s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined index: time D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 207 行.
+NOTIC: [8] Undefined index: time D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 207 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:24:57+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0020s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined index: time D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 207 行.
+NOTIC: [8] Undefined index: time D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 207 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:29:39+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:30:07+08:00 ] 127.0.0.1 /Admin/User/apply_pass/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0040s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_pass%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT id,username,invit_1,invit_2,invit_3 FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: set autocommit=0 [ RunTime:0.0000s ]
+SQL: lock tables movesay_relation_change_apply write,movesay_user write [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: UPDATE `movesay_user` SET `invit_1`='94',`invit_2`='0',`invit_3`='0',`area`='1' WHERE `id` = '2' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: UPDATE `movesay_relation_change_apply` SET `status`='1' WHERE `id` = '2' [ RunTime:0.0000s ]
+SQL: commit [ RunTime:0.0240s ]
+SQL: unlock tables [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-16T18:30:08+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:35:31+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 102 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:36:15+08:00 ] 127.0.0.1 /Admin/User/apply_pass/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_pass%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-16T18:40:04+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 102 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:40:06+08:00 ] 127.0.0.1 /Admin/User/apply_pass/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_pass%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0020s ]
+SQL: SELECT id,username,invit_1,invit_2,invit_3 FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: set autocommit=0 [ RunTime:0.0000s ]
+SQL: lock tables movesay_relation_change_apply write,movesay_user write [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0040s ]
+SQL: UPDATE `movesay_user` SET `invit_1`='94',`invit_2`='0',`invit_3`='0',`area`='0' WHERE `id` = '94' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: UPDATE `movesay_relation_change_apply` SET `status`='1' WHERE `id` = '3' [ RunTime:0.0000s ]
+SQL: commit [ RunTime:0.0370s ]
+SQL: unlock tables [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:40:07+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 102 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:40:53+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0020s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 102 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:41:20+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 106 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 102 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-16T18:41:21+08:00 ] 127.0.0.1 /Admin/User/apply_pass/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_pass%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT id,username,invit_1,invit_2,invit_3 FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0010s ]
+SQL: set autocommit=0 [ RunTime:0.0000s ]
+SQL: lock tables movesay_relation_change_apply write,movesay_user write [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: UPDATE `movesay_user` SET `invit_1`='94',`invit_2`='94',`invit_3`='0',`area`='1' WHERE `id` = '94' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: UPDATE `movesay_relation_change_apply` SET `status`='1' WHERE `id` = '4' [ RunTime:0.0000s ]
+SQL: commit [ RunTime:0.0420s ]
+SQL: unlock tables [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-16T18:41:23+08:00 ] 127.0.0.1 /Admin/User/apply_show.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_version` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `movesay_version` WHERE `status` = 0 ORDER BY name desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/apply_show%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `movesay_menu` WHERE ( url like 'User/%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`title` FROM `movesay_menu` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `movesay_menu` WHERE ( pid = 3 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `movesay_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '前台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '用户配置' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip`,`ico_name` FROM `movesay_menu` WHERE `group` = '后台用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_relation_change_apply` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `movesay_relation_change_apply` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 106 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 102 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `movesay_user` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: class D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 30 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 139 行.
+NOTIC: [8] Undefined index: status D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 142 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 150 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 153 行.
+NOTIC: [8] Undefined index: field D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 156 行.
+NOTIC: [8] Undefined index: name D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 159 行.
+NOTIC: [8] Undefined variable: page D:\workfile\btc_fujian2\Runtime\Cache\Admin\96f5f5e486893203445e5886d468029c.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

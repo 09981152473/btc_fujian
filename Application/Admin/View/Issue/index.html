@@ -1,0 +1,184 @@
+<include file="Public:header"/>
+<div id="main-content">
+	<div id="top-alert" class="fixed alert alert-error" style="display: none;">
+		<button class="close fixed" style="margin-top: 4px;">&times;</button>
+		<div class="alert-content">警告内容</div>
+	</div>
+	<div id="main" class="main">
+		<div class="main-title-h" >
+			<span class="h1-title" style="float:left;">认购管理</span>
+                        
+                        <!--设置认购总量-->
+                        <!--
+                        <div style="float:left;margin-left:5px;height:20px;line-height:20px;margin-top:10px;">
+                            <form action="/Admin/Issue/save_issue_total" method="POST" >
+                                <label for='issuetotal'>最大发行量：</label><input type="text" id="issuetotal" name="issuetotal" value="{$issue_num}" style="width:80px;" />
+                                <input type="submit" value="提交"  style="width:40px;background-color:#005916;"/>
+                                <span style="height:20px;line-height:20px;font-size:16px;margin-top:13px;">已发行<i style="color:red;"> {$issued_num} </i>枚</span>
+                            </form>
+                        </div>
+                        -->
+                        
+                        <!--设置下级提成比例-->
+                        <!--
+                        <div style='float:left;margin-left:5px;height:20px;line-height:20px;margin-top:10px;'>
+                            <form action ='/Admin/Issue/save_nextrate' method="POST">
+                                <label for='nextrate'>下级提成比例：</label><input type="text" id="nextrate" name="nextrate" value="{$nextrate}" style="width:20px;"/>
+                                <span style="color:red;height:15px;line-height:15px;font-size:15px;">%</span>
+                                <input type="submit" value="提交"  style="width:40px;background-color:#005916;"/>
+                            </form>
+                        </div>
+                        -->
+                        
+                        
+                        <!--设置产币率比例-->
+                        <!--
+                        <div style='float:left;margin-left:5px;height:20px;line-height:20px;margin-top:10px;'>
+                            <form action ='/Admin/Issue/save_chabilv' method="POST">
+                                <label for='nextrate'>产币率：</label><input type="text" id="chanbilv" name="chanbilv" value="{$chabilv}" style="width:30px;"/>
+                                <span style="color:red;height:15px;line-height:15px;font-size:15px;">%</span>
+                                <input type="submit" value="提交"  style="width:40px;background-color:#005916;"/>
+                            </form>
+                        </div>
+                        -->
+                        
+                        <!--设置下级提成比例-->
+                        <!--
+                        <div style='float:left;margin-left:5px;height:20px;line-height:20px;margin-top:10px;'>
+                            <form action ='/Admin/Issue/save_jtbl' method="POST">
+                                <label for='jtbl'>静态倍率：</label><input type="text" id="jtbl" name="jtbl" value="{$jtbl}" style="width:30px;" />
+                                <span style="color:red;height:15px;line-height:15px;font-size:15px;">4.50代表4.5倍</span>
+                                <input type="submit" value="提交"  style="width:40px;background-color:#005916;"/>
+                            </form>
+                        </div>
+                        -->
+                        
+                        <!--设置奖金分配比例-->
+                        <!--
+                        <div style='float:left;margin-left:5px;height:20px;line-height:20px;margin-top:10px;'>
+                            <form action ='/Admin/Issue/save_fenpei' method="POST">
+                                <label>奖金分配--</label>
+                                <label for='trade'>交易：</label><input type="text" id="trade" name="trade" value="{$trade}" style="width:30px;" />
+                                <label for='market'>商城：</label><input type="text" id="market" name="market" value="{$market}" style="width:30px;" />
+                                <label for='found'>基金：</label><input type="text" id="found" name="found" value="{$found}" style="width:30px;" />
+                                <span style="color:red;height:15px;line-height:15px;font-size:15px;">三者之和加起来为100</span>
+                                <input type="submit" value="提交"  style="width:40px;background-color:#005916;"/>
+                            </form>
+                        </div>
+                        -->
+                        
+		</div>
+		<div class="cf">
+			<div class="fl">
+				<a class="btn  btn-success" href="{:U('Issue/edit')}">新 增</a>
+				<button class="btn ajax-post  btn-info" url="{:U('Issue/status',array('method'=>'resume'))}" target-form="ids">启 用</button>
+				<button class="btn ajax-post  btn-warning" url="{:U('Issue/status',array('method'=>'forbid'))}" target-form="ids">禁 用</button>
+				<button class="btn ajax-post confirm btn-danger" url="{:U('Issue/status',array('method'=>'delete'))}" target-form="ids">删 除</button>
+			</div>
+			<div class="search-form fr cf">
+				<div class="sleft">
+					<form name="formSearch" id="formSearch" method="get" name="form1">
+						<select style="width: 160px; float: left; margin-right: 10px;" name="status" class="form-control">
+							<option value=""
+							<empty name="Think.get.status">selected</empty>
+							>全部状态</option>
+							<option value="1"
+							<eq name="Think.get.status" value="1">selected</eq>
+							>冻结状态</option>
+							<option value="2"
+							<eq name="Think.get.status" value="2">selected</eq>
+							>正常状态</option>
+						</select>
+						<select style=" width: 160px; float: left; margin-right: 10px;" name="field" class="form-control">
+							<option value="name"
+							<eq name="Think.get.field" value="name">selected</eq>
+							>认购名称</option>
+						</select>
+						<input type="text" name="name" class="search-input form-control  " value="{$Think.get.name}" placeholder="请输入查询内容" style="">
+						<a class="sch-btn" href="javascript:;" id="search"> <i class="btn-search"></i> </a>
+					</form>
+					<script>
+						//搜索功能
+						$(function () {
+							$('#search').click(function () {
+								$('#formSearch').submit();
+							});
+						});
+						//回车搜索
+						$(".search-input").keyup(function (e) {
+							if (e.keyCode === 13) {
+								$("#search").click();
+								return false;
+							}
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="data-table table-striped">
+			<table class="">
+				<thead>
+				<tr>
+					<th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
+					<th class="">ID</th>
+					<th class="">认购名称</th>
+					<th class="">认购币种</th>
+					<th class="">付款币种</th>
+					<th class="">认购总量</th>
+					<th class="">已认购量</th>
+					<th class="">认购价格</th>
+					<th class="">认购限量</th>
+					<th class="">解冻次数</th>
+					<th class="">解冻间隔</th>
+					<th class="">开启时间</th>
+					<th class="">状态</th>
+					<th class="">操作</th>
+				</tr>
+				</thead>
+				<tbody>
+				<notempty name="list">
+					<volist name="list" id="vo">
+						<tr>
+							<td><input class="ids" type="checkbox" name="id[]" value="{$vo.id}"/></td>
+							<td>{$vo.id}</td>
+							<td>{$vo.name}</td>
+							<td>{$C['coin'][$vo['coinname']]['title']}</td>
+							<td>{$C['coin'][$vo['buycoin']]['title']}</td>
+							<td>{$vo['num']*1}</td>
+							<td>{$vo['deal']*1}</td>
+							<td>{$vo['price']*1}</td>
+							<td>{$vo['limit']*1}</td>
+							<td>{$vo['ci']}</td>
+							<td>{$vo['jian']}</td>
+							<td>{$vo['time']}</td>
+							<td>
+								<eq name="vo.status" value="1">可用
+									<else/>
+								                               禁用
+								</eq>
+							</td>
+							<td><a href="{:U('Issue/edit?id='.$vo['id'])}" class="btn btn-primary btn-xs">编辑</a></td>
+						</tr>
+					</volist>
+					<else/>
+					<td colspan="12" class="text-center">Oh! 暂时还没有内容!</td>
+				</notempty>
+				</tbody>
+			</table>
+			<div class="page">
+				<div>{$page}</div>
+			</div>
+		</div>
+	</div>
+</div>
+<include file="Public:footer"/>
+<block name="script">
+	<script type="text/javascript" charset="utf-8">
+		//导航高亮
+		highlight_subnav("{:U('Issue/index')}");
+                
+                //自定义添加配置导航
+         var nav_str = '<li><a class="item" href="/Admin/Issue/conf.html"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>  认购配置</li>';
+         $("#subnav>ul:eq(0)>li:eq(0)").before(nav_str);
+	</script>
+</block>
