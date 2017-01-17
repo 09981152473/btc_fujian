@@ -110,105 +110,106 @@
 	</script>
 	 --><?php endif; ?>
 
-<script src="/Public/Admin/js/layer/laydate/laydate.js"></script>
 <div id="main-content">
-    <div id="top-alert" class="fixed alert alert-error" style="display: none;">
-        <button class="close fixed" style="margin-top: 4px;">&times;</button>
-        <div class="alert-content">警告内容</div>
-    </div>
-    <div id="main" class="main">
-        <div class="main-title-h">
-            <span class="h1-title">财务明细--(测试版)仅供参考,目前只统计人民币部分</span>
-        </div>
-        <div class="cf">
-            <div class="search-form fr cf">
-                <div class="sleft">
-                    <form name="formSearch" id="formSearch" method="get" name="form1" >
-                        <select style=" width: 160px; float: left; margin-right: 10px;" name="field" class="form-control">
-                            <option value="username"
-                            <?php if(($_GET['field']) == "username"): ?>selected<?php endif; ?>
-                            >用户名</option>
-                        </select>
-                        <input type="text" name="name" class="search-input form-control  " value="<?php echo ($_GET['name']); ?>" placeholder="请输入查询内容" style="">
-                        <a class="sch-btn" href="javascript:;" id="search"> <i class="btn-search"></i> </a>
-                    </form>
-                    <script>
-                        //搜索功能
-                        $(function(){
-                            $('#search').click(function(){
-                                $('#formSearch').submit();
-                            });
-                        });
-                        //回车搜索
-                        $(".search-input").keyup(function(e){
-                            if(e.keyCode===13){
-                                $("#search").click();
-                                return false;
-                            }
-                        });
-                    </script>
-                </div>
-            </div>
-        </div>
-        <div class="data-table table-striped">
-            <table class="">
-                <thead>
-                <tr>
-                    <th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
-                    <th class="">ID</th>
-                    <th class="">用户名</th>
-                    <th class="">操作币种</th>
-                    <th class="">操作数量</th>
-                    <th class="">操作类型</th>
-                    <th class="">操作之前</th>
-                    <th class="">操作之后</th>
-                    <th class="">操作说明</th>
-                    <th class="">操作时间</th>
-                    <th class="">状态</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                            <td><input class="ids" type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>"/></td>
-                            <td><?php echo ($vo['id']); ?></td>
-                            <td><?php echo ($vo['username']); ?></td>
-                            <td><?php echo ($vo['coinname']); ?></td>
-                            <td><?php echo ($vo['fee']); ?></td>
-                            <td><?php echo ($vo['type']); ?></td>
-                            <td>正常 : <?php echo ($vo['num_a']); ?><br>
-                                冻结 : <?php echo ($vo['num_b']); ?><br>
-                                总计 : <?php echo ($vo['num']); ?><br>
-                            </td>
-                            <td>正常 : <?php echo ($vo['mum_a']); ?><br>
-                                冻结 : <?php echo ($vo['mum_b']); ?><br>
-                                总计 : <?php echo ($vo['mum']); ?><br>
-                            </td>
-                            <td>名称 : <?php echo ($vo['name']); ?><br>
-                                详情 :
-                                <?php if(empty($vo['nameid'])): ?><font color="red">有异常</font>
-                                    <?php else: ?>
-                                    <!--<a href="<?php echo ($vo['nameid']); ?>">查看详细</a>--><?php endif; ?>
-                                <br>
-                                备注 : <?php echo ($vo['remark']); ?><br>
-                            </td>
-                            <td><?php echo ($vo['addtime']); ?></td>
-                            <td>
-                                <?php if(($vo['status']) == "1"): ?>正常
-                                    <?php else: ?>
-                                    <font color="red">比对上次记录<br>发现异常<br>误差大于1</font><?php endif; ?>
-                            </td>
-                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                    <?php else: ?>
-                    <td colspan="12" class="text-center">Oh! 暂时还没有内容!</td><?php endif; ?>
-                </tbody>
-            </table>
-            <div class="page">
-                <div><?php echo ($page); ?></div>
-            </div>
-        </div>
-    </div>
+	<div id="top-alert" class="fixed alert alert-error" style="display: none;">
+		<button class="close fixed" style="margin-top: 4px;">&times;</button>
+		<div class="alert-content">警告内容</div>
+	</div>
+	<div id="main" class="main">
+		<div class="main-title-h">
+			<span class="h1-title"><a href="<?php echo U('Trade/market');?>">认购管理</a> >></span>
+                        <span class="h1-title">认购配置</span>
+		</div>
+            
+		<div class="tab-wrap">
+			<div class="tab-content">
+				<form id="form" action="<?php echo U('Admin/Issue/conf');?>" method="post" class="form-horizontal" enctype="multipart/form-data">
+					<div id="tab" class="tab-pane in tab">
+						<div class="form-item cf">
+                                                    
+							<table>
+								<tr class="controls">
+									<td class="item-label">最大发行量:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="issue_total_mum" value="<?php echo ($issue_mum); ?>">
+									</td>
+                                                                        <td class="item-note">已发行<span><?php echo ($issued_num); ?></span></td>
+								</tr>
+                                                                
+                                                                <!--
+								<tr class="controls">
+									<td class="item-label">下级提成比例</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="nextrate" value="<?php echo ($nextrate); ?>">
+									</td>
+									<td class="item-note">%</td>
+								</tr>
+                                                                -->
+                                                                
+								<tr class="controls">
+									<td class="item-label">产币率:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="chanbilv" value="<?php echo ($chanbilv); ?>">
+									</td>
+									<td class="item-note">%</td>
+								</tr>
+								<tr class="controls">
+									<td class="item-label">静态倍率:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="jtbl" value="<?php echo ($jtbl); ?>">
+									</td>
+									<td class="item-note"></td>
+								</tr>
+                                                                
+                                                                <tr>
+                                                                     <td><span style="font-size:16px;font-weight:600;padding-left:12px;">提成分配</span></td>
+                                                                     <td colspan="2" style="color:red;">(三者之和加起来为100)</td>
+                                                                </tr>
+								<tr class="controls">
+									<td class="item-label">交易份额:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="rate_trade" value="<?php echo ($trade); ?>">
+									</td>
+									<td class="item-note">%</td>
+								</tr>
+								<tr class="controls">
+									<td class="item-label">商场份额:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="rate_market" value="<?php echo ($market); ?>">
+									</td>
+									<td class="item-note">%</td>
+								</tr>
+								<tr class="controls">
+									<td class="item-label">基金份额:</td>
+									<td>
+										<input type="text" class="form-control input-10x" name="rate_found" value="<?php echo ($found); ?>">
+									</td>
+									<td class="item-note">%</td>
+								</tr>
+                                                                <tr class="controls">
+									<td class="item-label"></td>
+									<td>
+										<div class="form-item cf">
+                                                                                    <!--
+											<button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定
+											</button>
+                                                                                    -->
+                                                                                       
+                                                                                        <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+                                                                                    
+											<a class="btn btn-return" href="<?php echo ($_SERVER['HTTP_REFERER']); ?>">返 回</a>
+										</div>
+									</td>
+								</tr>
+							</table>
+                                                    
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
-
 
 
 
@@ -320,7 +321,11 @@
 </body>
 </html>
 
-    <script type="text/javascript" charset="utf-8">
-        //导航高亮
-        highlight_subnav("<?php echo U('Finance/index');?>");
-    </script>
+	<script type="text/javascript" charset="utf-8">
+		//导航高亮
+		highlight_subnav("<?php echo U('Trade/market');?>");
+                
+                //自定义添加配置导航
+         var nav_str = '<li><a class="item" href="/Admin/Issue/conf.html"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>  认购配置</li>';
+         $("#subnav>ul:eq(0)>li:eq(0)").before(nav_str);
+	</script>

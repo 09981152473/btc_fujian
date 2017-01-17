@@ -20,7 +20,7 @@
 								<tr class="controls">
 									<td class="item-label">最大发行量:</td>
 									<td>
-										<input type="text" class="form-control input-10x" name="issue_total_mum" value="{$issue_num}">
+										<input type="text" class="form-control input-10x" name="issue_total_mum" value="{$issue_mum}">
 									</td>
                                                                         <td class="item-note">已发行<span>{$issued_num}</span></td>
 								</tr>
@@ -79,8 +79,9 @@
 									<td class="item-label"></td>
 									<td>
 										<div class="form-item cf">
-											<button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定
-											</button>
+                                                                                    
+                                                                                        <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+                                                                                    
 											<a class="btn btn-return" href="{$Think.server.HTTP_REFERER}">返 回</a>
 										</div>
 									</td>

@@ -110,49 +110,39 @@
 	</script>
 	 --><?php endif; ?>
 
+<script type="text/javascript" src="/Public/layer/laydate/laydate.js"></script>
 <div id="main-content">
 	<div id="top-alert" class="fixed alert alert-error" style="display: none;">
 		<button class="close fixed" style="margin-top: 4px;">&times;</button>
 		<div class="alert-content">警告内容</div>
 	</div>
 	<div id="main" class="main">
-		<div class="main-title-h">
-			<span class="h1-title">人民币充值</span>
+		<div class="main-title-h" style="font-size: 24px;">
+			<span class="h1-title"><?php echo (htmlspecialchars($title)); ?></span>
+			<?php if($suggest): ?>（<?php echo (htmlspecialchars($suggest)); ?>）<?php endif; ?>
+			<?php if(isset($_GET['name'])): ?><i class="ca"></i>[<a href="<?php echo ($titleList['url']); ?>"> <?php echo (htmlspecialchars($titleList['title'])); ?></a> ]<?php endif; ?>
 		</div>
 		<div class="cf">
 			<div class="fl">
-				<button class="btn ajax-post confirm btn-danger" url="<?php echo U('Finance/myczStatus',array('type'=>'del'));?>" target-form="ids">删 除</button>
+				<?php if(isset($buttonList['add'])): ?><a class="btn add-btn btn-success" href="<?php echo ($buttonList['add']['url']); ?>"><?php echo ($buttonList['add']['title']); ?></a><?php endif; ?>
+				<?php if(isset($buttonList['resume'])): ?><button class="btn ajax-post btn-info" url="<?php echo ($buttonList['resume']['url']); ?>" target-form="ids"><?php echo ($buttonList['resume']['title']); ?></button><?php endif; ?>
+				<?php if(isset($buttonList['forbid'])): ?><button class="btn ajax-post btn-warning" url="<?php echo ($buttonList['forbid']['url']); ?>" target-form="ids"><?php echo ($buttonList['forbid']['title']); ?></button><?php endif; ?>
+				<?php if(isset($buttonList['delete'])): ?><button class="btn ajax-post confirm delete-btn btn-danger" url="<?php echo ($buttonList['delete']['url']); ?>" target-form="ids"><?php echo ($buttonList['delete']['title']); ?></button><?php endif; ?>
 			</div>
 			<div class="search-form fr cf">
 				<div class="sleft">
-					<form name="formSearch" id="formSearch" method="get" name="form1">
-						<select style="width: 160px; float: left; margin-right: 10px;" name="status" class="form-control">
-							<option value=""
-							<?php if(empty($_GET['status'])): ?>selected<?php endif; ?>
-							>全部状态</option>
-							<option value="1"
-							<?php if(($_GET['status']) == "1"): ?>selected<?php endif; ?>
-							>未付款</option>
-							<option value="2"
-							<?php if(($_GET['status']) == "2"): ?>selected<?php endif; ?>
-							>成长成功</option>
-							<option value="3"
-							<?php if(($_GET['status']) == "3"): ?>selected<?php endif; ?>
-							>人工到账</option>
-							<option value="4"
-							<?php if(($_GET['status']) == "4"): ?>selected<?php endif; ?>
-							>处理中</option>
-						</select>
-						<select style=" width: 160px; float: left; margin-right: 10px;" name="field" class="form-control">
-							<option value="username"
-							<?php if(($_GET['field']) == "username"): ?>selected<?php endif; ?>
-							>用户名</option>
-							<option value="tradeno"
-							<?php if(($_GET['field']) == "tradeno"): ?>selected<?php endif; ?>
-							>订单号</option>
-						</select>
-						<input type="text" name="name" class="search-input form-control  " value="<?php echo ($_GET['name']); ?>" placeholder="请输入查询内容" style="">
-						<a class="sch-btn" href="javascript:;" id="search"> <i class="btn-search"></i> </a>
+					<form action="<?php echo ((isset($searchPostUrl) && ($searchPostUrl !== ""))?($searchPostUrl):'/Admin/Shop/index.html'); ?>" name="formSearch" id="formSearch" method="get" name="form1">
+						<?php if(is_array($searches)): $i = 0; $__LIST__ = $searches;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$search): $mod = ($i % 2 );++$i; if($search['type'] == 'select'): ?><select size="1" name="<?php echo ($search['name']); ?>" class="search-input form-control form-input-width" style="height: 32px; font-size: 14px; width: 110px; float: left; margin-right: 5px;" name="field">
+									<?php if(is_array($search['attr'])): $i = 0; $__LIST__ = $search['attr'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$svo): $mod = ($i % 2 );++$i; $search_name=isset($_GET[$search['name']])?$_GET[$search['name']]:'' ?>
+										<option value="<?php echo ($key); ?>"
+										<?php if(($key) == $search_name): ?>selected<?php endif; ?>
+										><?php echo ($svo); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+								</select>
+								<?php elseif($search['type'] == 'time'): ?>
+								<input type="text" class="search-input input-1x" name="<?php echo ($search["name"]); ?>" value="<?php echo I($search['name']);?>" placeholder="<?php echo ($search["attr"]); ?>" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"></td>
+								<?php else: ?>
+								<input type="text" name="<?php echo ($search["name"]); ?>" class="search-input" value="<?php echo I($search['name']);?>" placeholder="<?php echo ($search["attr"]); ?>" style="width: 150px">
+								<a class="sch-btn" href="javascript:;" id="search"> <i class="btn-search"></i> </a><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 					</form>
 					<script>
 						//搜索功能
@@ -172,52 +162,28 @@
 				</div>
 			</div>
 		</div>
-		<div class="data-table table-striped">
-			<table class="">
-				<thead>
-				<tr>
-					<th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
-					<th class="">ID</th>
-					<th class="">用户名</th>
-					<th class="">充值金额</th>
-					<th width="">到账金额</th>
-					<th width="">充值方式</th>
-					<th width="">充值订单</th>
-					<th class="">充值时间</th>
-					<th width="">状态</th>
-					<th width="">操作</th>
-				</tr>
-				</thead>
-				<tbody>
-				<?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-							<td><input class="ids" type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>"/></td>
-							<td><?php echo ($vo["id"]); ?></td>
-							<td><?php echo ($vo['username']); ?>
-							</td>
-							<td><?php echo ($vo["num"]); ?></td>
-							<td><?php echo ($vo["mum"]); ?></td>
-							<td><?php echo ($vo["type"]); ?></td>
-							<td><?php echo ($vo["tradeno"]); ?></td>
-							<td><?php echo (addtime($vo["addtime"])); ?></td>
-							<td>
-								<?php if(($vo["status"]) == "0"): ?>未付款<?php endif; ?>
-								<?php if(($vo["status"]) == "1"): ?>充值成功<?php endif; ?>
-								<?php if(($vo["status"]) == "2"): ?>人工到账<?php endif; ?>
-								<?php if(($vo["status"]) == "3"): ?>处理中<?php endif; ?>
-							</td>
-							<td>
-								<?php if(($vo["status"]) == "0"): ?><a href="<?php echo U('Finance/myczQueren?id='.$vo['id']);?>" class="ajax-get btn btn-primary btn-xs">确认到账 </a><?php endif; ?>
-								<?php if(($vo["status"]) == "3"): ?><a href="<?php echo U('Finance/myczQueren?id='.$vo['id']);?>" class="ajax-get btn btn-primary btn-xs">确认到账 </a><?php endif; ?>
-							</td>
-						</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-					<?php else: ?>
-					<td colspan="12" class="text-center">Oh! 暂时还没有内容!</td><?php endif; ?>
-				</tbody>
-			</table>
-			<div class="page">
-				<div><?php echo ($page); ?></div>
-			</div>
-		</div>
+		<!-- 数据表格 -->
+		<?php if($keyList): ?><div class="data-table table-striped">
+				<table class="">
+					<thead>
+					<tr>
+						<th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
+						<?php if(is_array($keyList)): $i = 0; $__LIST__ = $keyList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$field): $mod = ($i % 2 );++$i;?><th><?php echo (htmlspecialchars($field["title"])); ?></th><?php endforeach; endif; else: echo "" ;endif; ?>
+					</tr>
+					</thead>
+					<tbody>
+					<?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$e): $mod = ($i % 2 );++$i;?><tr>
+								<td><input class="ids" type="checkbox" name="id[]" value="<?php echo ($e['id']); ?>"/></td>
+								<?php if(is_array($keyList)): $i = 0; $__LIST__ = $keyList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$field): $mod = ($i % 2 );++$i;?><td class="text-ellipsis"><?php echo ($e[$field['name']]); ?></td><?php endforeach; endif; else: echo "" ;endif; ?>
+							</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+						<?php else: ?>
+						<td colspan="12" class="text-center">Oh! 暂时还没有内容!</td><?php endif; ?>
+					</tbody>
+				</table>
+				<div class="page">
+					<div><?php echo ($pagination); ?></div>
+				</div>
+			</div><?php endif; ?>
 	</div>
 </div>
 
@@ -330,8 +296,3 @@
 
 </body>
 </html>
-
-	<script type="text/javascript" charset="utf-8">
-		//导航高亮
-		highlight_subnav("<?php echo U('Finance/mycz');?>");
-	</script>

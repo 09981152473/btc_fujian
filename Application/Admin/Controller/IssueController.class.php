@@ -25,7 +25,7 @@ class IssueController extends AdminController
                 
                 
                 $add_conf = M('add_conf') ->where(array('id'=>1)) ->find();
-                $this ->assign('issue_num',$add_conf['issue_total_num']);//显示已经设置好的总发行量
+                $this ->assign('issue_mum',$add_conf['issue_total_mum']);//显示已经设置好的总发行量
                 $this ->assign('nextrate',$add_conf['nextrate']);//显示下级提成率
                 $this ->assign('jtbl',$add_conf['jtbl']);//显示静态倍率 
                 
@@ -442,7 +442,7 @@ class IssueController extends AdminController
             if(empty($_POST)){ //显示
                 
                 $add_conf = M('add_conf') ->where(array('id'=>1)) ->find();
-                $this ->assign('issue_num',$add_conf['issue_total_num']);//显示已经设置好的总发行量
+                $this ->assign('issue_mum',$add_conf['issue_total_mum']);//显示已经设置好的总发行量
                 $this ->assign('nextrate',$add_conf['nextrate']);//显示下级提成率
                 $this ->assign('jtbl',$add_conf['jtbl']);//显示静态倍率 
                 
@@ -499,7 +499,6 @@ class IssueController extends AdminController
                 if($issue_total_num_int && $issue_total_num_int < $aleady_num){
                     $this -> error('新设置的认购总数不能小于已经认购的数量!');
                 }
-                
       
                 $total = intval($_POST['rate_trade']) + intval($_POST['rate_market']) + intval($_POST['rate_found']);
                 if($total == 100){
