@@ -72,13 +72,12 @@ class IssueController extends AdminController
 			$this->error('测试站暂时不能修改！');
 		}
 
-
                 //数量控制(总发行量10亿台)
                 $num = trim($_POST['num']);
                 $all_num = M('issue') -> sum('num');
                 
-                $issue_num = M('add_conf') ->where(array('id'=>1)) ->field(array('issue_total_num')) ->find();
-                $left_num = $issue_num['issue_total_num'] - $all_num;
+                $issue_num = M('add_conf') ->where(array('id'=>1)) ->field(array('issue_total_mum')) ->find();
+                $left_num = $issue_num['issue_total_mum'] - $all_num;
                 if($_POST['num'] > $left_num){
                     $this ->error('你还可以发行'.$left_num.'台');
                 }
