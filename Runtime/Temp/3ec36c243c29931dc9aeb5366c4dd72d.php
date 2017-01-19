@@ -1,3 +1,0 @@
-<?php
-//000000000000s:501:"<span><span style="line-height:21px;"><span style="font-size:16px;color:#E56600;">★</span><span style="color:#E56600;"> &nbsp;</span><span style="color:#E56600;"></span><span style="color:#E56600;">认购有锁定期，请合理配置你的财产 &nbsp;</span><span style="color:#E56600;">❷</span><span style="color:#E56600;">❿</span><span style="color:#E56600;">❷</span><span style="color:#E56600;"></span><span style="color:#E56600;"></span><span style="color:#E56600;"></span></span></span>";
-?>
