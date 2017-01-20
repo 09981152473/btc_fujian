@@ -181,8 +181,8 @@ class IssueController extends HomeController
 		$finance_mum_user_coin = $mo->table('movesay_user_coin')->where(array('userid' => userid()))->find();
 		$finance_hash = md5(userid() . $finance_num_user_coin['cny'] . $finance_num_user_coin['cnyd'] . $mum . $finance_mum_user_coin['cny'] . $finance_mum_user_coin['cnyd'] . MSCODE . 'auth.movesay.com');
 		$rs[] = $mo->table('movesay_finance')->add(array('userid' => userid(), 'coinname' => 'cny', 'num_a' => $finance_num_user_coin['cny'], 'num_b' => $finance_num_user_coin['cnyd'], 'num' => $finance_num_user_coin['cny'] + $finance_num_user_coin['cnyd'], 'fee' => $num, 'type' => 2, 'name' => 'issue', 'nameid' => $finance_nameid, 'remark' => '认购中心-立即认购', 'mum_a' => $finance_mum_user_coin['cny'], 'mum_b' => $finance_mum_user_coin['cnyd'], 'mum' => $finance_mum_user_coin['cny'] + $finance_mum_user_coin['cnyd'], 'move' => $finance_hash, 'addtime' => time(), 'status' => $finance['mum'] != ($finance_num_user_coin['cny'] + $finance_num_user_coin['cnyd']) ? 0 : 1));
-		//$rs[] = $mo->table('movesay_user_coin')->where(array('userid' => userid()))->setInc($Issue['coinname'], $jd_num);
-                $rs[] = $mo->table('movesay_user_coin')->where(array('userid' => userid()))->setInc($Issue['coinname'], 0);
+		$rs[] = $mo->table('movesay_user_coin')->where(array('userid' => userid()))->setInc($Issue['coinname'], $jd_num);
+        //$rs[] = $mo->table('movesay_user_coin')->where(array('userid' => userid()))->setInc($Issue['coinname'], 0);
 		$rs[] = $mo->table('movesay_issue')->where(array('id' => $id))->setInc('deal', $num);
 
 		if ($Issue['num'] <= $Issue['deal']) {
