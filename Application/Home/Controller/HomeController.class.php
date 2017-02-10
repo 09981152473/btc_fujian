@@ -160,10 +160,9 @@ class HomeController extends \Think\Controller
 		$footerArticle = (APP_DEBUG ? null : S('footer_indexArticle'));
 
 		if (!$footerArticle) {
-			foreach ($footerArticleType as $k => $v) {
+			foreach ($footerArticleType as $kk => $vv) {
 				//$footerArticle[$v['name']] = M('ArticleType')->where(array('shang' => $v['name'], 'footer' => 1, 'status' => 1))->order('id asc')->limit(4)->select();
-			        $footerArticle[$v['name']] = M('Article')->field(array('id','title'))->where(array('shang' => $v['name'], 'footer' => 1, 'status' => 1))->order('id asc')->limit(4)->select();
-                            
+			        $footerArticle[$vv['name']] = M('Article')->field(array('id','title'))->where(array('type' => $vv['name'], 'footer' => 1, 'status' => 1))->order('id asc')->limit(4)->select();
                         }
 
 			S('footer_indexArticle', $footerArticle);
