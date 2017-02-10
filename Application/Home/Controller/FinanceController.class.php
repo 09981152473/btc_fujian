@@ -1742,11 +1742,11 @@ class FinanceController extends HomeController
             }
 
             //同时加入自己的上级会员
-            $upLayerUser = $model ->field(array('id,username,area')) ->where(array('id'=>$user['invit_1'])) ->select();
-            $arrangeUser = array_merge($upLayerUser,$sameLayerUsers_issued);
+            //$upLayerUser = $model ->field(array('id,username,area')) ->where(array('id'=>$user['invit_1'])) ->select();
+            //$arrangeUser = array_merge($upLayerUser,$sameLayerUsers_issued);
             
             $this -> assign('loginUser',userid());
-            $this -> assign('sameLayerUsers',$arrangeUser);
+            $this -> assign('sameLayerUsers',$sameLayerUsers_issued);
             
             $this ->display();
         }
@@ -1780,10 +1780,10 @@ class FinanceController extends HomeController
             
             
             //上级会员
-            $upLayerUser = $model ->field(array('id,username,area')) ->where(array('id'=>$user['invit_1'])) ->select();
-            $arrangeUser = array_merge($upLayerUser,$sameLayerUsers);
+            //$upLayerUser = $model ->field(array('id,username,area')) ->where(array('id'=>$user['invit_1'])) ->select();
+            //$arrangeUser = array_merge($upLayerUser,$sameLayerUsers);
             
-            $this ->ajaxReturn($arrangeUser);
+            $this ->ajaxReturn($sameLayerUsers_issued);
         }
  
         
@@ -1794,9 +1794,8 @@ class FinanceController extends HomeController
             $id = $_GET['id']; //谁被修改
             $invit_1 = $_GET['invit_1']; //被修改指向了谁
             
-            $model = M('user');
             
-            $count = $model -> where(array('invit_1'=>$invit_1)) ->count();
+            $count = M('user') -> where(array('invit_1'=>$invit_1)) ->count();
             $area_true = $count ? $area : 0;
             
             $model = M('relation_change_apply');
@@ -1805,7 +1804,7 @@ class FinanceController extends HomeController
                 'cid' => $cid,
                 'request_id' => $id,
                 'invit_1' => $invit_1,
-                'area' => $area,
+                'area' => $area_true,
                 'time' => time(),
                 'status' => 0 
             );
