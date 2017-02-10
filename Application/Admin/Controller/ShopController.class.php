@@ -452,7 +452,6 @@ class ShopController extends AdminController
 	public function edit_coin($id = NULL)
 	{
 		if (!empty($_POST)) {
-                        var_dump($_POST);
 			if (check($_POST['id'], 'd')) {
                              
 				$rs = M('ShopCoin')->save($_POST);
