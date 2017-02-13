@@ -1054,7 +1054,7 @@ class FinanceController extends HomeController
                     }else{
                         $right_yeji = 0.00;
                     }
-                
+                 
                 $this->assign('left_yeji',$left_yeji);
                 $this->assign('right_yeji',$right_yeji);
                     
@@ -1769,31 +1769,36 @@ class FinanceController extends HomeController
                                 'id' => array('neq',$id)
             )) ->select();
             
+           // $this->ajaxReturn($sameLayerUsers);die;
+            
             //过滤，必须要有购买记录
             $model_issue_log = M('issue_log');
             foreach($sameLayerUsers as $k=>$v){
-                $res = $model_issue_log ->where(array('userid'=>$v['id'])) ->select();
+                $res = $model_issue_log ->where(array('userid'=>$v['id'])) ->find();
                 if($res){
-                    $sameLayerUsers_issued[] = $res;
+                    $sameLayerUsers_issued[] = $v;
                 }
             }
-            
             
             //上级会员
             //$upLayerUser = $model ->field(array('id,username,area')) ->where(array('id'=>$user['invit_1'])) ->select();
             //$arrangeUser = array_merge($upLayerUser,$sameLayerUsers);
             
-            $this ->ajaxReturn($sameLayerUsers_issued);
+            if($sameLayerUsers_issued){
+                $this ->ajaxReturn(array('status'=>1,'des'=>'success','info'=>$sameLayerUsers_issued));
+            }else{
+                $this ->ajaxReturn(array('status'=>0,'des'=>'没有合适的安置人，不能发送申请'));
+            }
+            
+            
         }
- 
-        
+
         //更新修改关系
         public function updateRelation(){
             $area = $_GET['area'];
             $cid  = $_GET['cid'] ;//谁申请修改的
             $id = $_GET['id']; //谁被修改
             $invit_1 = $_GET['invit_1']; //被修改指向了谁
-            
             
             $count = M('user') -> where(array('invit_1'=>$invit_1)) ->count();
             $area_true = $count ? $area : 0;
@@ -1811,31 +1816,11 @@ class FinanceController extends HomeController
             
             $res = $model ->data($data) ->add();
             if($res){
-                echo json_encode(array('status'=>1,'des'=>'success'));
+                echo json_encode(array('status'=>1,'des'=>'申请发送成功'));
             }else{
-                echo json_encode(array('status'=>0,'des'=>'fail'));
+                echo json_encode(array('status'=>0,'des'=>'申请发送失败，请重试！'));
             }
-            
-            //echo json_encode(array('status'=>999,'area'=>$area_true,'id'=>$id,'invit_1'=>$invit_1));die;
-            
-            /*
-            $invit_user = $model -> field(array('id,username,invit_1,invit_2,invit_3')) ->where(array('id'=>$invit_1)) ->select();
-            
-            $arr = array(
-                   'invit_1' => $invit_1,
-                   'invit_2' => $invit_user[0]['invit_1'],
-                   'invit_3' => $invit_user[0]['invit_2'],
-                   'area' => $area_true
-                );
-            
-            $res =$model ->where(array('id'=>$id)) ->setField($arr);
-            if($res){
-                echo json_encode(array('status'=>1,'des'=>'success'));
-            }else{
-                
-            }
-            */
-            
+   
         }
         
         
