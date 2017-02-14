@@ -17,8 +17,8 @@
     // 定义数据库地址
     define('DB_HOST', '127.0.0.1');
     // 定义数据库名
-    //define('DB_NAME', 'btc_fujian2');//本地数据库
-    define('DB_NAME', 'btc_fujian2_online');//线上的测试数据库
+    define('DB_NAME', 'btc_fujian2');//本地数据库
+    //define('DB_NAME', 'btc_fujian2_online');//线上的测试数据库
     
     // 定义数据库账号
     define('DB_USER', 'root');
