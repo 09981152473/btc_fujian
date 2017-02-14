@@ -76,6 +76,7 @@
 					<th class="">手机号</th>
 					<th class="">真实姓名</th>
 					<th class="">支付宝</th>
+                                        <th class="">邀请人</th>
 					<th class="">1代推荐人</th>
 					<th class="">2代推荐人</th>
 					<th class="">3代推荐人</th>
@@ -100,6 +101,11 @@
 							<td>{$vo.moble}</td>
 							<td>{$vo.truename}</td>
 							<td>{$vo.alipay}</td>
+                                                        
+                                                        <!--
+                                                        <td>
+								<a href="{:U('User/index?name='.$vo['invit_0'].'&field=id')}">{$vo['invit_0']}</a>
+							</td>
 							<td>
 								<a href="{:U('User/index?name='.$vo['invit_1'].'&field=id')}">{$vo['invit_1']}</a>
 							</td>
@@ -109,6 +115,13 @@
 							<td>
 								<a href="{:U('User/index?name='.$vo['invit_3'].'&field=id')}">{$vo['invit_3']}</a>
 							</td>
+                                                        -->
+                                                        
+                                                        <td>{$vo['invit_0']}</td>
+							<td>{$vo['invit_1']}</td>
+							<td>{$vo['invit_2']}</td>
+							<td>{$vo['invit_3']}</td>
+                                                        
 							<td>{$vo.addtime|addtime}</td>
                                                         
                                                         <td>{$vo.left_yeji}</td>

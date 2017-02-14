@@ -1,0 +1,36 @@
+[ 2017-02-14T10:01:26+08:00 ] 127.0.0.1 /Home/Finance/updateRelation?cid=111&area=1&id=112&invit_1=113
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `movesay_user` WHERE ( id = 111 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_user_coin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `movesay_user_coin` WHERE `userid` = 111 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_config` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `movesay_config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: qijianke D:\workfile\btc_fujian2\Application\Home\Controller\HomeController.class.php 第 49 行.
+SQL: SHOW COLUMNS FROM `movesay_coin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_coin` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_market` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_market` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: show tables [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `movesay_daohang` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `movesay_daohang` WHERE `status` = 1 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_article_type` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `movesay_article_type` WHERE `status` = 1 AND `footer` = 1 AND `shang` = '' ORDER BY sort asc ,id desc LIMIT 3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_article` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title` FROM `movesay_article` WHERE `type` = 'aboutus' AND `footer` = 1 AND `status` = 1 ORDER BY id asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `movesay_article` WHERE `type` = 'Article' AND `footer` = 1 AND `status` = 1 ORDER BY id asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `movesay_article` WHERE `type` = 'detail/id/74' AND `footer` = 1 AND `status` = 1 ORDER BY id asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `movesay_user` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `movesay_user` WHERE `invit_1` = '113' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `movesay_relation_change_apply` [ RunTime:0.0020s ]
+SQL: INSERT INTO `movesay_relation_change_apply` (`cid`,`request_id`,`invit_1`,`area`,`time`,`status`) VALUES ('111','112','113','0','1487037686','0') [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

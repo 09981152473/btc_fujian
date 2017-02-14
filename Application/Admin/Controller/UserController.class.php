@@ -22,6 +22,7 @@ class UserController extends AdminController
 		$list = M('User')->where($where)->order('id desc')->limit($Page->firstRow . ',' . $Page->listRows)->select();
 
 		foreach ($list as $k => $v) {
+                        $list[$k]['invit_0'] = M('User')->where(array('id' => $v['invit_0']))->getField('username');
 			$list[$k]['invit_1'] = M('User')->where(array('id' => $v['invit_1']))->getField('username');
 			$list[$k]['invit_2'] = M('User')->where(array('id' => $v['invit_2']))->getField('username');
 			$list[$k]['invit_3'] = M('User')->where(array('id' => $v['invit_3']))->getField('username');

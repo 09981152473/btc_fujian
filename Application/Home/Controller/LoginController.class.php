@@ -86,7 +86,7 @@ class LoginController extends HomeController
 		$mo->execute('lock tables movesay_user write , movesay_user_coin write ');
 		$rs = array();
 		//$rs[] = $mo->table('movesay_user')->add(array('username' => $username, 'password' => md5($password), 'invit' => $tradeno, 'tpwdsetting' => 1, 'invit_1' => $invit_1, 'invit_2' => $invit_2, 'invit_3' => $invit_3, 'addip' => get_client_ip(), 'addr' => get_city_ip(), 'addtime' => time(), 'status' => 1));
-                $rs[] = $mo->table('movesay_user')->add(array('username' => $username, 'password' => md5($password), 'invit' => $tradeno, 'tpwdsetting' => 1, 'invit_1' => $invit_1, 'invit_2' => $invit_2, 'invit_3' => $invit_3, 'addip' => get_client_ip(), 'addr' => get_city_ip(), 'addtime' => time(), 'status' => 1,'area' => $area));
+                $rs[] = $mo->table('movesay_user')->add(array('username' => $username, 'password' => md5($password), 'invit' => $tradeno, 'tpwdsetting' => 1, 'invit_0' => $invit_1,'invit_1' => $invit_1, 'invit_2' => $invit_2, 'invit_3' => $invit_3, 'addip' => get_client_ip(), 'addr' => get_city_ip(), 'addtime' => time(), 'status' => 1,'area' => $area));
 		$rs[] = $mo->table('movesay_user_coin')->add(array('userid' => $rs[0]));
 
 		if (check_arr($rs)) {
